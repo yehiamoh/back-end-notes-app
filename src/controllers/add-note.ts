@@ -1,5 +1,4 @@
 import Note from "../models/notes";
-import mongoose from "mongoose";
 
 export async function postNote(req:any,res:any,next:any) {
    try{

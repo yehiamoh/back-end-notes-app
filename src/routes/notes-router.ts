@@ -1,10 +1,14 @@
 import { getNotes } from "../controllers/get-notes";
-import{postNote} from "../controllers/add-note";
-import express from 'express'
+import { postNote } from "../controllers/add-note";
+import updateNote from "../controllers/update-note";
 
-const router =express.Router();
+import express from 'express';
 
-router.get('/notes',getNotes)
+const router = express.Router();
 
-router.post('/note/',postNote)
+router.get('/notes', getNotes);
+
+router.post('/note', postNote);
+
+router.patch('/updatenote/:id', updateNote);
 export default router;
