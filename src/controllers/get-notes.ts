@@ -7,6 +7,6 @@ export async function getNotes (req:any,res:any,next:any){
   }
   catch(error:any){
    console.log(error);
-   res.status(404).json({message:error.toString()})
+   res.status(500).json({message:error.toString()})
   }
 }
