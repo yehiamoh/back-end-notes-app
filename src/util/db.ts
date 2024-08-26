@@ -16,5 +16,4 @@ const dbConnection = async () => {
         console.log("error in connection to mongo db :", error)
     }
 }
-
 export default dbConnection;

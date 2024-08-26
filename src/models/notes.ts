@@ -29,6 +29,17 @@ import mongoose, { Schema,Document,Model, now } from "mongoose";
    },
  });
 
- const Note:Model<INote>= mongoose.model<INote>('Notes',noteSchema);
+ noteSchema.pre('save', function(next) {
+   if (this.isModified()) {
+     this.updatedAt = Date.now();
+   }
+   next();
+ });
 
+ noteSchema.pre('updateOne',function(next){
+   this.set({updatedAt:Date.now()});
+   next();
+ });
+
+ const Note:Model<INote>= mongoose.model<INote>('Notes',noteSchema);
  export default Note;

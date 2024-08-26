@@ -10,16 +10,21 @@ export default async function updateProduct(req: any, res: any, next: any) {
       if (!id||!ObjectId.isValid(id)) {
          return res.status(400).json({ message: "note id is required" });
       }
-
-      if (!title) {
-         result = await Note.updateOne({ _id: new ObjectId(id) }, { $set: { "content": content } })
-      }
-      if (!content) {
-         result = await Note.updateOne({ _id: new ObjectId(id) }, { $set: { "title": title } })
-      }
+       
       if (!title && !content) {
          return res.status(404).json({ message: "you have to update at least one field" })
       }
+
+
+      const updatedFileds:any={};
+      if(title){
+         updatedFileds.title=title;
+      }
+      if(content){
+         updatedFileds.content=content;
+      }
+
+     result= await Note.updateOne({_id:new ObjectId(id)},{$set:updatedFileds})
 
       if (result?.acknowledged) {
          return res.status(202).json({ message: "note updated" });
