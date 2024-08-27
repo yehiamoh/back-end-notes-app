@@ -1,5 +1,4 @@
-import Note from "../models/notes";
-
+import Note from '../../models/notes';
 export async function postNote(req:any,res:any,next:any) {
    try{
       const{title,content}=req.body;
@@ -10,7 +9,7 @@ export async function postNote(req:any,res:any,next:any) {
       if(!content){
          return res.status(404).json({message:"content is required"})
       }   
-      const result=  Note.create({
+      await Note.create({
          title:title,
          content:content
       })

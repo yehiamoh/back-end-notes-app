@@ -1,5 +1,5 @@
 import { ObjectId } from 'mongodb';
-import Note from '../models/notes';
+import Note from '../../models/notes';
 
 export default async function updateProduct(req: any, res: any, next: any) {
    try {
