@@ -43,7 +43,8 @@ updatedAt:date
 
 tags : array of ObjectID
 
-__Tag Mode__ : 
+
+__Tag Model__ : 
 
 name :string
 
