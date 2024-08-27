@@ -1,6 +1,6 @@
-# Welcome to Noty 👋
+# Welcome to Notes App 👋
 
-Noty is a backend application for managing notes, built with Node.js and TypeScript. It leverages MongoDB for data storage and Mongoose as the Object Data Modeling (ODM) library to simplify database interactions. Noty provides robust CRUD functionality for notes and tags, ensuring seamless and efficient note management
+It is a backend application for managing notes, built with Node.js and TypeScript. It leverages MongoDB for data storage and Mongoose as the Object Data Modeling (ODM) library to simplify database interactions.  provides robust CRUD functionality for notes and tags, ensuring seamless and efficient note management
 
 # Routes 
  __. /notes__ : CRUD opearion about notes
@@ -25,6 +25,26 @@ __. Patch V0/api/tags__  : update a tag
 
 __. DELETE V0/api/tags__  : delete a tag
 
+# Schemas 
+
+__.Notes__ : 
+
+title : string
+
+content : string
+
+createdAt : date
+
+updatedAt:date
+
+tags : array of ObjectID
+
+__.Tag__ :
+name :string
+
+createdAt:date
+
+updatedAt:date
 
 
 
