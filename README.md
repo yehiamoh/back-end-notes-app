@@ -55,7 +55,7 @@ updatedAt:date
 
 # API Example
 
-__GET http://localhost:3000/V0/api/tags/__
+__GET /V0/api/tags/__
  
 ```json
 {
