@@ -25,9 +25,13 @@ __. Patch V0/api/tags__  : update a tag
 
 __. DELETE V0/api/tags__  : delete a tag
 
+__.POST V0/api/notes/:noteID/tags/tagsID__ : add a tag to a note
+
+__.Delete V0/api/notes/:noteID/tags/tagsID__ : delete a tag from a note
+
 # Schemas 
 
-__.Notes__ : 
+__Note Model__ : 
 
 title : string
 
@@ -39,12 +43,18 @@ updatedAt:date
 
 tags : array of ObjectID
 
-__.Tag__ :
+__Tag Mode__ : 
+
 name :string
 
 createdAt:date
 
 updatedAt:date
+
+
+```json
+{
+}
 
 
 
