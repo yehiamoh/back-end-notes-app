@@ -2,8 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 
-import db from'./util/db';
-import router from './routes/notes-router';
+import db from './util/db';
+import noteRouter from './routes/notes-router';
+import tagRouter from './routes/tag-router';
 
 
 dotenv.config();
@@ -19,7 +20,9 @@ async function start() {
 
         app.use(bodyParser.json());
 
-        app.use('/V0/api',router);
+        app.use('/V0/api', noteRouter);
+        app.use('/V0/api', tagRouter);
+
 
         app.listen(port, () => {
             console.log(`server is running on port ${port}`)
