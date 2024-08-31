@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import db from './util/db';
 import noteRouter from './routes/notes-router';
 import tagRouter from './routes/tag-router';
+import authRouter from './routes/auth-router';
 
 
 dotenv.config();
@@ -22,6 +23,7 @@ async function start() {
 
         app.use('/V0/api', noteRouter);
         app.use('/V0/api', tagRouter);
+        app.use('/V0/api', authRouter);
 
 
         app.listen(port, () => {

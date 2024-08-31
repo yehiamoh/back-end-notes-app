@@ -19,5 +19,4 @@ router.patch("/tags/:id",updateTag);
 router.get("/tags/:id",getSingleTag);
 
 
-
-export default router;
+export default router;``
