@@ -1,6 +1,6 @@
 import express from'express';
 const router= express.Router();
-import ensureAuthentication from "../util/ensure-authorization";
+import ensureAuthentication from "../services/ensure-authorization";
 
 import { register } from '../controllers/auth/register';
 import { login } from '../controllers/auth/login';

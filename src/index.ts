@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 
-import db from './util/db';
+import db from './services/db';
 import noteRouter from './routes/notes-router';
 import tagRouter from './routes/tag-router';
 import authRouter from './routes/auth-router';
